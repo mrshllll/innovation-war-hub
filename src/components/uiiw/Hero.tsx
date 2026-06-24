@@ -1,0 +1,69 @@
+import { ArrowRight, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export function Hero({ onRegister }: { onRegister: () => void }) {
+  return (
+    <section id="top" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
+      <div className="absolute inset-0 bg-mesh" />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6">
+        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+          <span className="size-1.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
+          2026 Edition · Open Worldwide
+        </span>
+
+        <h1 className="mt-6 font-display text-[clamp(2.5rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tight">
+          UI Innovation
+          <br />
+          <span className="text-gradient-accent">War 2026</span>
+        </h1>
+
+        <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
+          The premier business innovation battle. Founders, builders, and dreamers face off to
+          pitch the next generation of sustainable, nature-powered, circular ventures.
+        </p>
+
+        <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <Button
+            size="lg"
+            onClick={onRegister}
+            className="group h-12 bg-[image:var(--gradient-primary)] px-7 text-base font-semibold text-accent-foreground hover:opacity-95 glow-ring"
+          >
+            Daftar Sekarang
+            <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-0.5" />
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-12 border-border bg-card/50 px-7 text-base font-semibold text-foreground backdrop-blur hover:bg-card"
+          >
+            <a href="#">
+              <BookOpen className="mr-1 size-4" /> Access Guidebook
+            </a>
+          </Button>
+        </div>
+
+        <dl className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-border/60 pt-8 text-left sm:gap-8">
+          {[
+            ["120+", "Teams expected"],
+            ["IDR 250M", "Total prize pool"],
+            ["6 weeks", "Build & pitch"],
+          ].map(([v, l]) => (
+            <div key={l}>
+              <dt className="font-display text-xl font-bold sm:text-2xl">{v}</dt>
+              <dd className="text-xs text-muted-foreground sm:text-sm">{l}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  );
+}
