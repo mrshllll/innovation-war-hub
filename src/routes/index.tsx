@@ -1,29 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+
+import { SiteNav } from "@/components/uiiw/SiteNav";
+import { Hero } from "@/components/uiiw/Hero";
+import { ThemeBanner } from "@/components/uiiw/ThemeBanner";
+import { Pillars } from "@/components/uiiw/Pillars";
+import { Partners } from "@/components/uiiw/Partners";
+import { SiteFooter } from "@/components/uiiw/SiteFooter";
+import { RegisterDialog } from "@/components/uiiw/RegisterDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "UI Innovation War 2026 — Pitch the future" },
+      {
+        name: "description",
+        content:
+          "UIIW 2026 — the premier business innovation battle. Develop sustainable innovation through nature-based intelligence and circular strategy.",
+      },
+      { property: "og:title", content: "UI Innovation War 2026" },
+      {
+        property: "og:description",
+        content:
+          "Compete in UIIW 2026 — sustainable, nature-based, circular ventures. Register your team now.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [open, setOpen] = useState(false);
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <SiteNav onRegister={() => setOpen(true)} />
+      <main>
+        <Hero onRegister={() => setOpen(true)} />
+        <ThemeBanner />
+        <Pillars />
+        <Partners />
+      </main>
+      <SiteFooter />
+      <RegisterDialog open={open} onOpenChange={setOpen} />
     </div>
   );
 }
