@@ -33,11 +33,13 @@ export function Hero() {
           </div>
         </div>
 
-        <h1 className="mt-6 font-display text-[clamp(2.5rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tight">
-          UI Innovation
-          <br />
-          <span className="text-gradient-accent">War 2026</span>
-        </h1>
+        <div className="hero-backdrop mx-auto mt-6 inline-block rounded-3xl px-6 py-5 sm:px-10 sm:py-8">
+          <h1 className="font-display text-[clamp(2.5rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tight">
+            <span className="hero-title-inverse">UI Innovation</span>
+            <br />
+            <span className="text-gradient-accent">War 2026</span>
+          </h1>
+        </div>
 
         <p className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
           The premier business innovation battle. Founders, builders, and dreamers face off to
