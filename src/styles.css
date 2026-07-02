@@ -163,3 +163,20 @@
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(14px) saturate(140%);
 }
+
+.hero-backdrop {
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.light .hero-backdrop {
+  background: oklch(0.14 0.015 240 / 0.58);
+  backdrop-filter: blur(32px) saturate(140%);
+  border: 1px solid oklch(1 0 0 / 12%);
+  box-shadow: 0 24px 80px -20px oklch(0.14 0.01 240 / 40%);
+}
+
+.light .hero-backdrop .hero-title-inverse {
+  color: oklch(0.98 0.005 120);
+}
