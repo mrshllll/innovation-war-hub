@@ -18,12 +18,15 @@ export function SiteNav() {
             Sponsor
           </a>
         </nav>
-        <a
-          href="#"
-          className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
-        >
-          Daftar
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#"
+            className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
+          >
+            Daftar
+          </a>
+        </div>
       </div>
     </header>
   );
