@@ -1,3 +1,5 @@
+import { ThemeToggle } from "./ThemeToggle";
+
 export function SiteNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/40 bg-background/60 backdrop-blur-xl">
@@ -18,12 +20,15 @@ export function SiteNav() {
             Sponsor
           </a>
         </nav>
-        <a
-          href="#"
-          className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
-        >
-          Daftar
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#"
+            className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
+          >
+            Daftar
+          </a>
+        </div>
       </div>
     </header>
   );
