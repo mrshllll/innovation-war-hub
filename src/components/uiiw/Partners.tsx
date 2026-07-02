@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function Partners() {
   return (
-    <section id="partners" className="px-4 pb-24 pt-8 sm:px-6">
+    <section id="sponsor" className="px-4 pb-24 pt-8 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-12 sm:px-12 sm:py-16">
           <div className="absolute inset-0 bg-mesh opacity-60" />

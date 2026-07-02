@@ -14,10 +14,24 @@ export function Hero({ onRegister }: { onRegister: () => void }) {
         }}
       />
       <div className="relative mx-auto max-w-6xl px-4 text-center sm:px-6">
-        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-          <span className="size-1.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
-          2026 Edition · Open Worldwide
-        </span>
+        <div className="inline-flex flex-col items-center gap-2 rounded-xl border border-accent/40 bg-card/40 p-4 backdrop-blur-sm glow-ring">
+          <div className="flex items-center gap-2 font-display text-[clamp(1.5rem,5vw,3rem)] font-bold leading-none tracking-tight text-foreground">
+            <span>00</span>
+            <span className="text-accent">:</span>
+            <span>00</span>
+            <span className="text-accent">:</span>
+            <span>00</span>
+          </div>
+          <div className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.15em] text-muted-foreground sm:gap-3">
+            <span>Days</span>
+            <span className="text-accent">:</span>
+            <span>Hours</span>
+            <span className="text-accent">:</span>
+            <span>Min</span>
+            <span className="text-accent">:</span>
+            <span>Sec</span>
+          </div>
+        </div>
 
         <h1 className="mt-6 font-display text-[clamp(2.5rem,8vw,5.5rem)] font-bold leading-[0.95] tracking-tight">
           UI Innovation
