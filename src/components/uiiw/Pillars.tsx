@@ -24,7 +24,7 @@ const PILLARS: { icon: LucideIcon; title: string; body: string; tag: string }[] 
 
 export function Pillars() {
   return (
-    <section id="pillars" className="px-4 py-16 sm:px-6 sm:py-24">
+    <section id="timeline" className="px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <div>
