@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-
-export function SiteNav({ onRegister }: { onRegister: () => void }) {
+export function SiteNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/40 bg-background/60 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
@@ -20,13 +18,12 @@ export function SiteNav({ onRegister }: { onRegister: () => void }) {
             Sponsor
           </a>
         </nav>
-        <Button
-          size="sm"
-          onClick={onRegister}
-          className="bg-[image:var(--gradient-primary)] font-semibold text-accent-foreground hover:opacity-95"
+        <a
+          href="#"
+          className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
         >
           Daftar
-        </Button>
+        </a>
       </div>
     </header>
   );

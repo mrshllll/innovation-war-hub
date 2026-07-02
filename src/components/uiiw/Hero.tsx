@@ -1,7 +1,7 @@
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function Hero({ onRegister }: { onRegister: () => void }) {
+export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
       <div className="absolute inset-0 bg-mesh" />
@@ -45,14 +45,13 @@ export function Hero({ onRegister }: { onRegister: () => void }) {
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button
-            size="lg"
-            onClick={onRegister}
-            className="group h-12 bg-[image:var(--gradient-primary)] px-7 text-base font-semibold text-accent-foreground hover:opacity-95 glow-ring"
+          <a
+            href="#"
+            className="group inline-flex h-12 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-7 text-base font-semibold text-accent-foreground hover:opacity-95 glow-ring"
           >
             Daftar Sekarang
             <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-0.5" />
-          </Button>
+          </a>
           <Button
             asChild
             size="lg"
