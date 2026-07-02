@@ -1,13 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-
 import { SiteNav } from "@/components/uiiw/SiteNav";
 import { Hero } from "@/components/uiiw/Hero";
 import { ThemeBanner } from "@/components/uiiw/ThemeBanner";
 import { Pillars } from "@/components/uiiw/Pillars";
 import { Partners } from "@/components/uiiw/Partners";
 import { SiteFooter } from "@/components/uiiw/SiteFooter";
-import { RegisterDialog } from "@/components/uiiw/RegisterDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,18 +27,16 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [open, setOpen] = useState(false);
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <SiteNav onRegister={() => setOpen(true)} />
+      <SiteNav />
       <main>
-        <Hero onRegister={() => setOpen(true)} />
+        <Hero />
         <ThemeBanner />
         <Pillars />
         <Partners />
       </main>
       <SiteFooter />
-      <RegisterDialog open={open} onOpenChange={setOpen} />
     </div>
   );
 }

@@ -18,13 +18,12 @@ export function SiteNav() {
             Sponsor
           </a>
         </nav>
-        <Button
-          size="sm"
-          onClick={onRegister}
-          className="bg-[image:var(--gradient-primary)] font-semibold text-accent-foreground hover:opacity-95"
+        <a
+          href="#"
+          className="inline-flex h-8 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-3 text-xs font-semibold text-accent-foreground hover:opacity-95"
         >
           Daftar
-        </Button>
+        </a>
       </div>
     </header>
   );
