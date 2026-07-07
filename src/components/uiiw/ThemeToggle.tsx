@@ -2,22 +2,22 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
-  const [light, setLight] = useState(false);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
-    if (light) root.classList.add("light");
-    else root.classList.remove("light");
-  }, [light]);
+    if (dark) root.classList.add("dark");
+    else root.classList.remove("dark");
+  }, [dark]);
 
   return (
     <button
       type="button"
       aria-label="Toggle theme"
-      onClick={() => setLight((v) => !v)}
-      className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border/60 bg-background/40 text-foreground transition-colors hover:text-accent"
+      onClick={() => setDark((v) => !v)}
+      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/70 bg-background/70 text-foreground transition-colors hover:border-accent/50 hover:text-accent"
     >
-      {light ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+      {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </button>
   );
 }
