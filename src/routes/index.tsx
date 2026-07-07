@@ -3,6 +3,7 @@ import { SiteNav } from "@/components/uiiw/SiteNav";
 import { Hero } from "@/components/uiiw/Hero";
 import { ThemeBanner } from "@/components/uiiw/ThemeBanner";
 import { Pillars } from "@/components/uiiw/Pillars";
+import { PastHighlights } from "@/components/uiiw/PastHighlights";
 import { Partners } from "@/components/uiiw/Partners";
 import { SiteFooter } from "@/components/uiiw/SiteFooter";
 
@@ -34,6 +35,7 @@ function Index() {
         <Hero />
         <ThemeBanner />
         <Pillars />
+        <PastHighlights />
         <Partners />
       </main>
       <SiteFooter />
