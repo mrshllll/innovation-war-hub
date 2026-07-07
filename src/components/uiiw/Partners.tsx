@@ -1,5 +1,12 @@
 import { Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
+const SPONSOR_PLACEHOLDERS = [
+  { label: "Sponsor 1", id: "sponsor-1" },
+  { label: "Sponsor 2", id: "sponsor-2" },
+  { label: "Sponsor 3", id: "sponsor-3" },
+  { label: "Sponsor 4", id: "sponsor-4" },
+  { label: "Sponsor 5", id: "sponsor-5" },
+];
 
 export function Partners() {
   return (
@@ -19,17 +26,25 @@ export function Partners() {
                 Put your brand in front of Southeast Asia's most ambitious founders. Co-create
                 challenges, host workshops, or run a stage.
               </p>
+
+              <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5">
+                {SPONSOR_PLACEHOLDERS.map((sponsor) => (
+                  <div
+                    key={sponsor.id}
+                    className="flex aspect-[3/2] items-center justify-center rounded-xl border border-border bg-muted/40 px-3 text-center text-xs font-medium text-muted-foreground"
+                  >
+                    {sponsor.label}
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="flex justify-start sm:justify-end">
-              <Button
-                asChild
-                size="lg"
-                className="h-12 bg-[image:var(--gradient-primary)] px-7 text-base font-semibold text-accent-foreground hover:opacity-95 glow-ring"
+              <a
+                href="#"
+                className="group inline-flex h-12 items-center justify-center rounded-md bg-[image:var(--gradient-primary)] px-7 text-base font-semibold text-accent-foreground hover:opacity-95 glow-ring"
               >
-                <a href="mailto:partners@uiiw2026.id">
-                  <Mail className="mr-1 size-4" /> Connect with Us
-                </a>
-              </Button>
+                <Mail className="mr-1 size-4" /> Connect with Us
+              </a>
             </div>
           </div>
         </div>
@@ -37,3 +52,4 @@ export function Partners() {
     </section>
   );
 }
+

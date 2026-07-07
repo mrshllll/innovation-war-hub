@@ -16,6 +16,9 @@ export function SiteNav() {
           <a href="#timeline" className="transition-colors hover:text-foreground">
             Timeline
           </a>
+          <a href="#past-highlights" className="transition-colors hover:text-foreground">
+            Highlights
+          </a>
           <a href="#sponsor" className="transition-colors hover:text-foreground">
             Sponsor
           </a>
